@@ -5,7 +5,7 @@ Air 2 Ultra 的 Windows x64 桌面稳屏原型，当前版本 **0.1.1**。使用
 
 ## 运行
 
-解压 [Windows 0.1.1 下载包](downloads/XREAL-StableScreen-v0.1.1-win-x64.zip)，运行 `XrealStableScreen.exe`。连接眼镜、切换 SBS 60Hz、选择独立的来源/眼镜显示器后启动。首次使用先做“静置校准（5秒）”。详细操作、已知限制及验证范围见 [中文说明](README.zh-CN.md)。
+解压 [Release 0.1.1 下载包](https://github.com/MainLe/xreal-windows-3DOF/releases/download/v0.1.1/XREAL-StableScreen-v0.1.1-win-x64.zip)，运行 `XrealStableScreen.exe`。连接眼镜、切换 SBS 60Hz、选择独立的来源/眼镜显示器后启动。首次使用先做“静置校准（5秒）”。详细操作、已知限制及验证范围见 [中文说明](README.zh-CN.md)。
 
 ## 构建与检查
 
@@ -14,9 +14,10 @@ Air 2 Ultra 的 Windows x64 桌面稳屏原型，当前版本 **0.1.1**。使用
 ```powershell
 .\build.ps1
 .\build.ps1 -Test
+.\Package-Release.ps1 -SkipBuild
 ```
 
-成品输出到 `dist/XREAL-StableScreen-v0.1.1`。测试覆盖协议、姿态数值、零偏校准、D3D 渲染及真实 DXGI 桌面采集，后者需要交互桌面。它不自动证明眼镜的端到端跟踪或长期稳定性。
+成品输出到 `dist/XREAL-StableScreen-v0.1.1`；打包脚本只将 EXE、说明和许可加入 `dist/XREAL-StableScreen-v0.1.1-win-x64.zip`，并生成 `SHA256SUMS`。测试覆盖协议、姿态数值、零偏校准、D3D 渲染及真实 DXGI 桌面采集，后者需要交互桌面。它不自动证明眼镜的端到端跟踪或长期稳定性。
 
 `tests/compare_android_packets.py` 是额外的离线原生命令包比对工具，需要另行提供原 Android 研究工作区、对应原生库和 Python `unicorn` / `pyelftools` 依赖。设置 `XREAL_ANDROID_PROJECT` 指向该工作区，再传入包含 `self-test.json` 的成品目录；日常构建与运行不需要这些 Android 输入。
 

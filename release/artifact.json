@@ -1,6 +1,13 @@
 {
-  "file": "XrealStableScreen.exe",
+  "repository": "MainLe/xreal-windows-3DOF",
+  "tag": "v0.1.1",
+  "file": "XREAL-StableScreen-v0.1.1-win-x64.zip",
   "version": "0.1.1",
-  "bytes": 588288,
-  "sha256": "e7651be63a74c7159d232c75b36e161f8edc843bfb8b5c9e818f6d6c989e0116"
+  "bytes": 298026,
+  "sha256": "5eeebd2e50c496a783168d8a8fea6524025598b1374b2a2175c53d6d0dc218ac",
+  "build_type": "release",
+  "automatedTestsPassed": 32,
+  "exeSha256": "539c830b81624f1507e305384e2b7f8023df9034b1b4ed0e470a83b53ba7d50b",
+  "exeBytes": 588288,
+  "architecture": "x64"
 }
